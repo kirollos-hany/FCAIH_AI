@@ -32,6 +32,13 @@ class KSProblem:
     def output_solution(self, position):
         optimal_val = self.fit_func(position, False)
         print(f"PSO found solution of optimal value: {optimal_val}")
+        items = []
+        for i in range(len(self.search_space[position])):
+            if(self.search_space[position][i] == 1):
+                items.append(i+1)
+        print("Items to store in knapsack:")
+        for i in range(len(items)):
+            print(f"{items[i]}, ", end=" ")
 
     def input_vals(self):
         for i in range(len(self.vals)):

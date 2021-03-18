@@ -24,11 +24,14 @@ while flag == 1:
         ks_problem = UKSProblem(num_items, capacity)
         ks_problem.input_vals()
         ks_problem.input_weights()
+        
 
     elif problem_type == bounded_type:
         # 1-0 knapsack problem
         ks_problem.input_vals()
         ks_problem.input_weights()
+        
+
     else:
         print("Invalid choice..try again")
         continue
